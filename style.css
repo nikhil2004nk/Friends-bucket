@@ -1,0 +1,366 @@
+:root {
+    --primary: #16404D;
+    --secondary: #DDA853;
+    --accent: #A6CDC6;
+    --background: #FBF5DD;
+    --text: #333;
+    --white: #fff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--background);
+    color: var(--primary);
+    font-family: 'Comic Neue', cursive;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.main-title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: var(--secondary);
+    text-shadow: 2px 2px var(--accent);
+    margin: 0.5rem 0;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+/* Card Styles */
+.card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+/* Intro Section */
+.intro-section {
+    background: var(--accent);
+    color: var(--white);
+    text-align: center;
+}
+
+.intro-section h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.hero-img {
+    max-width: min(100%, 300px);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.05);
+}
+
+.hero-text {
+    flex: 1 1 300px;
+}
+
+.hero-text h3 {
+    font-size: 1.8rem;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+
+
+/* Input Section */
+.input-section {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+.input-section input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-section input:focus {
+    border-color: var(--secondary);
+    outline: none;
+}
+
+.btn {
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #c08a3e;
+    transform: translateY(-2px);
+}
+
+.input-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Quote Section */
+.quote-section {
+    background: var(--accent);
+    color: var(--white);
+    text-align: center;
+}
+
+blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    quotes: "“" "”" "‘" "’";
+}
+
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
+}
+
+/* Social Section */
+.socials {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.socials .icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.socials .icons img {
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+
+.socials .icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    border-top: 2px dashed var(--secondary);
+    color: var(--primary);
+}
+
+/* Emoji Animations */
+.twinkle,
+.sparkle,
+.mask,
+.magic,
+.lock,
+.shush,
+.laugh,
+.heart {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.twinkle:hover,
+.sparkle:hover {
+    transform: rotate(20deg) scale(1.3);
+}
+
+.mask:hover {
+    transform: scale(1.2);
+}
+
+.magic:hover {
+    transform: scale(1.1) translateY(-5px);
+}
+
+.lock:hover {
+    transform: rotate(15deg);
+}
+
+.shush:hover {
+    transform: scale(1.3);
+}
+
+.laugh:hover {
+    transform: rotate(10deg) scale(1.2);
+}
+
+.heart:hover {
+    transform: scale(1.3);
+}
+
+
+#quoteDisplay {
+    transition: opacity 0.5s ease-in-out;
+    min-height: 60px;
+    /* Prevent layout shift */
+}
+
+.quote-section {
+    position: relative;
+}
+
+/* Optional: Add navigation dots */
+.quote-nav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.quote-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+}
+
+.quote-dot.active {
+    background: #ff6b6b;
+}
+
+/* Friend Cards Styling */
+.friend-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.friend-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 140px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.friend-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.friend-card h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.friend-card .emoji {
+    font-size: 2rem;
+    margin: 5px 0;
+}
+
+.friend-meta small {
+    color: #666;
+    font-size: 0.8em;
+}
+
+/* Demo Card Specific Styling */
+.friend-card.demo-card {
+    width: 180px;
+    background: #f0f7ff;
+    border: 2px dashed #4a90e2;
+    align-items: center;
+}
+
+.friend-card.demo-card .friend-details {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.friend-card.demo-card p {
+    margin: 5px 0;
+}
+
+.friend-card.demo-card .demo-note {
+    font-style: italic;
+    color: #4a90e2;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .input-section {
+        padding: 1rem;
+    }
+}
+
+/* Accessibility Focus Styles */
+:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 3px;
+}

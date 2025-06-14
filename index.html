@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends Forever | Fun Portal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Logo + Title -->
+    <header class="header">
+        <img src="logo.jpg" alt="Friends Logo" class="logo" />
+        <h1 class="main-title">Friends Forever <span class="twinkle">💫</span></h1>
+        <p class="tagline">Where Friendship Meets Magic!</p>
+    </header>
+
+    <main>
+        <!-- Intro Section -->
+        <section class="intro-section card">
+            <h2>Hey Friends, Wanna See Some Magic? <span class="sparkle">✨</span></h2>
+            <p>Enter the secret zone where memories, madness, and memes await just for YOU!</p>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="friendfun.jpg" alt="Friends having fun" class="hero-img" loading="lazy" />
+            <div class="hero-text">
+                <h3>Unlock Your Secret Comic Page <span class="mask">🎭</span></h3>
+                <p>Just a few details and <span class="magic">*poof*</span> — your memories appear like magic!</p>
+            </div>
+        </section>
+
+        <!-- Friend Cards Section -->
+        <section id="friendCards" class="friend-cards"></section>
+
+        <!-- Friend Input Section -->
+        <section class="input-section card">
+            <h2><span class="lock">🔐</span> Your Key to Fun</h2>
+            <form id="friendForm">
+                <input type="text" id="name" placeholder="Your Name" required aria-label="Your Name" />
+                <input type="date" id="birthdate" required aria-label="Your Birthdate" />
+                <input type="password" id="secretCode" placeholder="Your Secret Code" required
+                    aria-label="Secret Code" />
+                <button type="submit" class="btn">Unlock My Page</button>
+            </form>
+            <p class="input-note"><span class="note-icon">*</span>Only you know the magic code! <span
+                    class="shush">🤫</span></p>
+        </section>
+
+        <!-- Funny Quote Section -->
+        <section class="quote-section card">
+            <h2><span class="laugh">🤣</span> Quotable Moments</h2>
+            <blockquote id="quoteDisplay">"You're not weird. You're just limited edition!"</blockquote>
+        </section>
+    </main>
+
+    <!-- Social Handle Section -->
+    <section class="socials">
+        <h2>Let's Stay Connected!</h2>
+        <div class="icons">
+            <a href="https://www.instagram.com/nikhil__nk12?igsh=MWw3MnViMXphaTk5" aria-label="Instagram"><img
+                    src="insta.jpg" alt="Instagram" /></a>
+            <a href="https://www.snapchat.com/add/nikhil122004?share_id=Ppae_7GqDhQ&locale=en-IN"
+                aria-label="Snapchat"><img src="snapchat.jpg" alt="Snapchat" /></a>
+            <a href="https://github.com/nikhil2004nk" aria-label="linkedin"><img src="linkedin.png"
+                    alt="linkedin" /></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Built with <span class="heart">❤️</span> & Laughter by NIkkk | &copy; <span id="year"></span></p>
+    </footer>
+    <!-- At the bottom of your body tag -->
+    <script src="scripts/friends.js"></script>
+    <script src="scripts/auth.js"></script>
+</body>
+
+</html>
